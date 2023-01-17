@@ -8,7 +8,7 @@ class HumanB {
 		std::string	name;
 		Weapon weapon;
 	public:
-		HumanB(void);
+		HumanB(std::string title);
 		~HumanB(void);
 		void	attack(void);
 };
