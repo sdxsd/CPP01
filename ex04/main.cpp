@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	std::fstream		src;
 	std::ofstream		dst;
 
-	if (argc < 4 || argc > 4)
+	if (argc != 4)
 		return (0);
 	fileName = argv[1];
 	src.open(fileName.c_str());
