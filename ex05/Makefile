@@ -2,6 +2,7 @@ NAME = ex05
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 FILES = \
+		Harl.cpp \
 		main.cpp
 OFILES = $(FILES:.cpp=.o)
 
