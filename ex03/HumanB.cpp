@@ -15,6 +15,6 @@ void HumanB::attack() {
 		std::cout << name << ": is unable to attack due to lack of weaponry." << std::endl;
 }
 
-void HumanB::setWeapon(Weapon newWeapon) {
-	weapon = &newWeapon;
+void HumanB::setWeapon(Weapon *newWeapon) {
+	weapon = newWeapon;
 }

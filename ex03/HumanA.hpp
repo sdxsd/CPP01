@@ -6,9 +6,9 @@
 class HumanA {
 	private:
 		std::string	name;
-		Weapon weapon;
+		Weapon		*weapon;
 	public:
-		HumanA(std::string title, Weapon weaponType);
+		HumanA(std::string title, Weapon *weaponType);
 		~HumanA(void);
 		void	attack(void);
 };
