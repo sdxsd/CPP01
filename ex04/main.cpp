@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fcntl.h>
 #include <bits/stdc++.h>
 
 int main(int argc, char *argv[]) {
@@ -12,12 +11,22 @@ int main(int argc, char *argv[]) {
 		return (0);
 	fileName = argv[1];
 	src.open(fileName.c_str());
+	if (src.rdstate() == std::_S_failbit) {
+		std::cout << "Failed to open:" << fileName << std::endl;
+		return (1);
+	}
 	dst.open(fileName.append(".replace").c_str());
+	if (dst.rdstate() == std::_S_failbit) {
+		std::cout << "Failed to open:" << fileName << std::endl;
+		return (1);
+	}
 	while (src >> data) {
 		if (data == argv[2])
 			dst << argv[3];
 		else
 			dst << data;
+		if (!src.eof())
+			dst << " ";
 	}
 	dst << std::endl;
 	dst.close();
