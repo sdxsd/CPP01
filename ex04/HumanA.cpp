@@ -1,8 +1,8 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string title, std::string weaponType) {
+HumanA::HumanA(std::string title, Weapon weaponType) : weapon("") {
 	name = title;
-	weapon.setType(weaponType);
+	weapon.setType(weaponType.getType());
 }
 
 HumanA::~HumanA(void) {
