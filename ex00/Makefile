@@ -1,6 +1,6 @@
 NAME = ex00
 CC = c++
-flags = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98
 FILES = \
 		Zombie.cpp \
 		main.cpp
@@ -11,9 +11,9 @@ all: $(NAME)
 $(NAME): $(OFILES)
 	$(CC) $(FLAGS) $(OFILES) -o $(NAME)
 
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
-	echo "COMPILED:" $<
+%.o: %.cpp
+	@$(CC) $(FLAGS) -c $< -o $@
+	@echo "COMPILED:" $<
 
 clean:
 	rm -f $(OFILES)

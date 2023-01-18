@@ -8,8 +8,8 @@ int main(int argc, char *argv[]) {
 	std::fstream		dst;
 
 	fileName = argv[1];
-	src.open(fileName);
-	dst.open(fileName.append(".replace"));
+	src.open(fileName.c_str());
+	dst.open(fileName.append(".replace").c_str());
 	while (src >> data) {
 		if (data == argv[2])
 			dst << argv[3];
