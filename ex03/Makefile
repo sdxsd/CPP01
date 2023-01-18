@@ -1,9 +1,3 @@
-##
-# Project Title
-#
-# @file
-# @version 0.1
-
 NAME = ex03
 CC = c++
 flags = -Wall -Wextra -Werror -std=c++98
@@ -12,7 +6,7 @@ FILES = \
 		HumanA.cpp \
 		HumanB.cpp \
 		main.cpp
-OFILES = $(FILES:.c=.o)
+OFILES = $(FILES:.cpp=.o)
 
 all: $(NAME)
 
@@ -32,5 +26,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-# end

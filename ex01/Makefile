@@ -1,7 +1,9 @@
-NAME = ex02
+NAME = ex01
 CC = c++
 flags = -Wall -Wextra -Werror -std=c++98
 FILES = \
+		Zombie.cpp \
+		zombieHorde.cpp \
 		main.cpp
 OFILES = $(FILES:.cpp=.o)
 
