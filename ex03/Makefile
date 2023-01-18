@@ -8,6 +8,9 @@ NAME = ex03
 CC = c++
 flags = -Wall -Wextra -Werror -std=c++98
 FILES = \
+		Weapon.cpp \
+		HumanA.cpp \
+		HumanB.cpp \
 		main.cpp
 OFILES = $(FILES:.c=.o)
 
@@ -17,7 +20,7 @@ $(NAME): $(OFILES)
 	$(CC) $(FLAGS) $(OFILES) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 	echo "COMPILED:" $<
 
 clean:
