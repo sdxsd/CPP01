@@ -1,19 +1,19 @@
 #include "Harl.hpp"
 
 void Harl::debug(void) {
-
+	std::cout << "I enjoy verily the taste of succulent cucumber." << std::endl;
 }
 
 void Harl::info(void) {
-
+	std::cout << "Have you soiled my cucumber with the foul interference of your touch?" << std::endl;
 }
 
 void Harl::warning(void) {
-
+	std::cout << "How dare thee! Prepare to duel me ye scallywag!" << std::endl;
 }
 
 void Harl::error(void) {
-
+	std::cout << "* dies *" << std::endl;
 }
 
 Harl::Harl(void) {
@@ -30,5 +30,5 @@ Harl::Harl(void) {
 void Harl::complain(std::string level) {
 	for (int i = 0; i < sizeof(messageLevels); i++)
 		if (messageLevels[i].levelName == level)
-			messageLevels[i].levelFunction();
+			(this->*messageLevels[i].levelFunction)();
 }

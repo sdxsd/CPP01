@@ -7,7 +7,7 @@ class Harl;
 
 typedef struct s_level {
 	std::string	levelName;
-	void		(Harl::*levelFunction)();
+	void		(Harl::*levelFunction)(void);
 } t_level;
 
 class Harl {
