@@ -1,4 +1,4 @@
-NAME = ex03
+NAME = ex04
 CC = c++
 flags = -Wall -Wextra -Werror -std=c++98
 FILES = \

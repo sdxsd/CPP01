@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
 		horde = zombieHorde(n_zombies, argv[2]);
 		for (int i = 0; i < n_zombies; i++)
 			horde[i].announce();
+		delete []horde;
 	}
 	else
 		std::cout << "Please enter the number of zombies and a name for the zombies." << std::endl;
