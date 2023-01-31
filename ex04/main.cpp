@@ -12,12 +12,13 @@ int main(int argc, char *argv[]) {
 	fileName = argv[1];
 	src.open(fileName.c_str());
 	if (src.rdstate() == std::_S_failbit) {
-		std::cout << "Failed to open:" << fileName << std::endl;
+		std::cout << "Failed to open: " << fileName << std::endl;
 		return (1);
 	}
 	dst.open(fileName.append(".replace").c_str());
 	if (dst.rdstate() == std::_S_failbit) {
-		std::cout << "Failed to open:" << fileName << std::endl;
+		std::cout << "Failed to open: " << fileName << std::endl;
+		src.close();
 		return (1);
 	}
 	while (src >> data) {
