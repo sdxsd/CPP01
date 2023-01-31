@@ -2,6 +2,7 @@
 
 HumanB::HumanB(std::string title) {
 	name = title;
+	weapon = NULL;
 }
 
 HumanB::~HumanB(void) {
